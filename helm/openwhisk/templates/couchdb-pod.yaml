@@ -51,7 +51,7 @@ spec:
         {{- if .Values.k8s.persistence.enabled }}
         volumeMounts:
           - name: database-storage
-            mountPath: /opt/couchdb/data
+            mountPath: /var/lib/openwhisk
         {{- end }}
       {{- if .Values.k8s.persistence.enabled }}
       volumes:
