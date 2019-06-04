@@ -13,7 +13,7 @@ spec:
   storageClassName: {{ .Values.k8s.persistence.explicitStorageClass }}
 {{- end }}
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
       storage: {{ .Values.zookeeper.persistence.size }}
