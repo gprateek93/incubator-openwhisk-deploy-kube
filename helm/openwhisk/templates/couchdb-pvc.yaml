@@ -13,7 +13,8 @@ spec:
   storageClassName: {{ .Values.k8s.persistence.explicitStorageClass }}
 {{- end }}
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
+  storageClassName:manual
   resources:
     requests:
       storage: {{ .Values.db.persistence.size }}
