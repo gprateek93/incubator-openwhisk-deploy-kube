@@ -14,7 +14,7 @@ spec:
 {{- end }}
   accessModes:
     - ReadWriteOnce
-  storageClassName:manual
+  storageClassName: manual
   resources:
     requests:
       storage: {{ .Values.db.persistence.size }}
